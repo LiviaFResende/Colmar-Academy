@@ -193,13 +193,13 @@ footer {
         justify-content: center;
         color: #373737;
         width: 40%;
-        BORDER: 2PX solid;
     }
     .section-1 > .section-1-part-2 > button {
         background-color: #373737;
         border: none;
         padding: 1rem auto;
         width: 100%;
+        margin: 2rem;
     }
     .section-1-part-2 > button > a {
         color: white;
