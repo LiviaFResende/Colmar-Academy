@@ -1,7 +1,5 @@
 
-
-
-/*  generics */
+/*    ----- GENERICS ------ */
 * {
     box-sizing: border-box;
 }
@@ -10,6 +8,9 @@ html {
     font-size: 16px;
 }
 
+body {
+    margin: 2rem;
+}
 
 header { 
     height: 4rem;
@@ -41,26 +42,27 @@ header {
     justify-content: space-evenly;
 }
 
-
-/*  MAIN */
-
+/*     ---------  MAIN   --------- */
 
 /*  ----- MOBILE SECTION 1 */
-
 .section-1 {
     background-color: lightgrey;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: auto;
 }
 .section-1 > img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 .section-1 > .section-1-part-2 {
-    width: 100%;
     text-align: center;
     margin: 2rem;
     justify-content: center;
     color: #373737;
+    width: 100%;
 }
 .section-1 > .section-1-part-2 > button {
     background-color: #373737;
@@ -75,22 +77,64 @@ header {
 
 
 /*----- MOBILE  SECTION 2 and 3  */
-
 .article-2 {
     display: none;
 }
-
+/*  do not display */
 .article-3-desktop {
     display: none;
 }
-
+.article-3-mobile > ul {
+    width: 100%;
+    height: auto;
+}
 .article-3-mobile > ul > li {
     list-style-type: none;
-    width: 100%
+    width: 100%;
+    height: auto;
+}
+
+.article-3-mobile > ul > li > img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+/*    ------- MOBILE SECTION 4 -------- */
+/*  do not display this section on mobile version */
+.section-4-desktop {
+    display: none;
 }
 
 .section-4-mobile {
-    
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.section-4-mobile > ul > li {
+    margin: 1rem;
+    background-color: grey;
+    list-style-type: none;
+    width: 100%;
+    padding: 1rem;
+}
+
+
+/*    ----- MOBILE SECTION 5 ----- */
+.section-5-mobile {
+    width: 100%;
+    text-align: center;
+}
+.section-5-mobile > p {
+    text-align: center;
+    font-size: 2rem;
+}
+.section-5-mobile > video {
+    width: 100%
+
 }
 
  /* MOBILE FOOTER */
@@ -108,6 +152,7 @@ footer {
 
 @media only screen and (min-width: 768px) {
 
+    /*  -------- DESKTOP  */
     
     header {
         justify-content: space-between;
@@ -148,6 +193,7 @@ footer {
         justify-content: center;
         color: #373737;
         width: 40%;
+        BORDER: 2PX solid;
     }
     .section-1 > .section-1-part-2 > button {
         background-color: #373737;
@@ -164,6 +210,8 @@ footer {
     .section-2-3 {
         display: flex;
     }
+
+    /*   ----- DESKTOP SECTION 2 AND 3 - ARTICLE 2 ------ */
     .article-2 {
         display: flex;
         width: 60%;
@@ -180,15 +228,13 @@ footer {
     .article-2 > img {
         padding: 2rem;
     }
+
+        /*   ----- DESKTOP SECTION 2 AND 3  - ARTICLE 3 ------ */
     /* not display mobile version */
     .article-3-mobile {
         display: none;
     }
     /* display desktop version */
-    .article-3-desktop {
-        width: 40%;
-    }
-
     .article-3-desktop {
         display: flex;
         width: 40%;
@@ -208,11 +254,45 @@ footer {
         text-align: left;
     }
 
-/*   DESKTOP SECTION 4 */
+/*  -------- DESKTOP SECTION 4 ---------- */
 
-
+/*  don´t display mobile version */
 .section-4-mobile {
     display: none;
+}
+
+.section-4-desktop {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    font-size: 2rem;
+}
+
+.section-4-desktop > .section-4-desktop-grid {
+    display: grid;
+    grid-template: 1fr 1fr | 1fr 1fr 1fr;
+    grid-template-areas:
+        "1 2 3" 
+        "4 5 6";
+}
+
+.section-4-desktop-grid {
+    list-style-type: none;
+}
+
+.section-4-desktop-grid > li {
+    color: #373737;
+    background-color: white;
+    margin: 2rem;
+}
+.section-4-desktop > .grid-1 {
+    grid-area: 1;
+}
+.section-4-desktop > .grid-2 {
+    grid-area: 2;
+}
+.section-4-desktop > .grid-3 {
+    grid-area: 3;
 }
 
 .section-5-mobile {
