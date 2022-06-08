@@ -11,12 +11,6 @@ html {
 }
 
 
- /*  initial test  */
-section {
-    border: 2px solid;
-}
-
-
 header { 
     height: 4rem;
     display: flex;
@@ -49,10 +43,7 @@ header {
 
 
 /*  MAIN */
-main {
-    display: flex;
-    flex-direction: column;
-}
+
 
 /*  ----- MOBILE SECTION 1 */
 
@@ -65,6 +56,7 @@ main {
     width: 100%;
 }
 .section-1 > .section-1-part-2 {
+    width: 100%;
     text-align: center;
     margin: 2rem;
     justify-content: center;
@@ -97,13 +89,18 @@ main {
     width: 100%
 }
 
+.section-4-mobile {
+    
+}
+
+ /* MOBILE FOOTER */
 .footer-desktop {
     display: none;
 }
-
 footer { 
     text-align: center;
 }
+
 
 
 
@@ -140,6 +137,7 @@ footer {
     .section-1 {
         flex-direction: row;
     }
+
     .section-1 > img {
         width: 60%;
         margin: 2rem;
@@ -149,6 +147,7 @@ footer {
         margin: 2rem;
         justify-content: center;
         color: #373737;
+        width: 40%;
     }
     .section-1 > .section-1-part-2 > button {
         background-color: #373737;
@@ -161,34 +160,71 @@ footer {
         text-decoration: none;
     }
 
-
-    /*   ----- SECTION 2 AND 3------ */
-
+    /*   ----- DESKTOP SECTION 2 AND 3------ */
+    .section-2-3 {
+        display: flex;
+    }
     .article-2 {
+        display: flex;
         width: 60%;
+        flex-direction: column;
     }
-    .article-3-desktop {
-        width: 40%;
+    .article-2 > p {
+        text-align: center;
+        margin: 2rem;
+        justify-content: center;
+        color: #373737;
+        font-size: 2.5rem;
+        margin: 2rem;
     }
+    .article-2 > img {
+        padding: 2rem;
+    }
+    /* not display mobile version */
     .article-3-mobile {
         display: none;
     }
+    /* display desktop version */
+    .article-3-desktop {
+        width: 40%;
+    }
+
     .article-3-desktop {
         display: flex;
+        width: 40%;
+        text-align: center;
     }
-
     .article-3-desktop > ul > li {
         list-style-type: none;
+        display: flex;
+        padding: 1rem;
+        flex-direction: row;
+    }
+    .article-3-desktop > ul > li > div {
+        list-style-type: none;
+        display: flex;
+        padding: 1rem;
+        flex-direction: column;
+        text-align: left;
     }
 
+/*   DESKTOP SECTION 4 */
 
-    /* ---------   footer  */
+
+.section-4-mobile {
+    display: none;
+}
+
+.section-5-mobile {
+    display: none;
+}
+
+
+    /* ---------   DESKTOP FOOTER   */
 
     .footer-desktop {
         display: flex;
     }
-
-
     footer {
         display: flex;
         justify-content: space-between;
